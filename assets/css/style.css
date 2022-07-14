@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Cobre a altura da tela inteira.*/
+    background-image: url(/imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* Serve para dar o espaçamento entre os itens. */
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+.relogio div {
+    display: flex;
+    flex-direction: column;
+    /* Serve para colocar os elementos um em baixo do outro. */
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    width: 150px;
+    color: #fff;
+    background: #4B4C85;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 8px;
+    letter-spacing: 3px;
+}
+
+.relogio div:hover {
+    transition: 1s;
+    height: 180px;
+    width: 160px;
+}
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo {
+    font-size: 10px;
+}
