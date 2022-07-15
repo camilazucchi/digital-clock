@@ -12,7 +12,7 @@ body {
     justify-content: center;
     height: 100vh;
     /* Cobre a altura da tela inteira.*/
-    background-image: url(/imagens/background.jpg);
+    background-image: url(imagens/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
