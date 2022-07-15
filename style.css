@@ -44,12 +44,6 @@ body {
     letter-spacing: 3px;
 }
 
-.relogio div:hover {
-    transition: 1s;
-    height: 180px;
-    width: 160px;
-}
-
 .relogio span {
     font-weight: bolder;
     font-size: 60px;
