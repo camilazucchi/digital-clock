@@ -13,6 +13,8 @@ body {
     height: 100vh;
     /* Cobre a altura da tela inteira.*/
     background-image: url(imagens/background.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
