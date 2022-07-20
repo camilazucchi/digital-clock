@@ -22,8 +22,8 @@ body {
     align-items: center;
     justify-content: space-around;
     /* Serve para dar o espaçamento entre os itens. */
-    height: 200px;
-    width: 550px;
+    min-height: 12.5rem;
+    min-width: 34.375rem;
     background: transparent;
     border-radius: 3px;
     box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
@@ -35,8 +35,8 @@ body {
     /* Serve para colocar os elementos um em baixo do outro. */
     align-items: center;
     justify-content: center;
-    height: 170px;
-    width: 150px;
+    min-height: 10.625rem;
+    min-width: 9.375rem;
     color: #fff;
     background: #4B4C85;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
@@ -46,9 +46,9 @@ body {
 
 .relogio span {
     font-weight: bolder;
-    font-size: 60px;
+    font-size: 3.75rem;
 }
 
 .relogio span.tempo {
-    font-size: 10px;
+    font-size: 0.625rem;
 }
