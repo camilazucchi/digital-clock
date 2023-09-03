@@ -2,20 +2,19 @@ const horas = document.getElementById('horas');
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
-const relogio = setInterval(function time() {
-    let dateToday = new Date();
-    let hr = dateToday.getHours();
-    let min = dateToday.getMinutes();
-    let s = dateToday.getSeconds();
+function updateTime() {
+  const dateToday = new Date();
+  const hr = String(dateToday.getHours()).padStart(2, '0');
+  const min = String(dateToday.getMinutes()).padStart(2, '0');
+  const s = String(dateToday.getSeconds()).padStart(2, '0');
 
-    if (hr < 10) hr = '0' + hr;
+  horas.textContent = hr;
+  minutos.textContent = min;
+  segundos.textContent = s;
+}
 
-    if (min < 10) min = '0' + min;
+const relogio = setInterval(updateTime, 1000); // Atualizar a cada 1 segundo
+updateTime(); // Call immediately to display the initial time
 
-    if (s < 10) s = '0' + s;
-
-    horas.textContent = hr;
-    minutos.textContent = min;
-    segundos.textContent = s;
-
-})
+// Chame imediatamente para exibir a hora inicial
+// clearInterval(relogio);
