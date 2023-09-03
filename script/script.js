@@ -1,21 +1,19 @@
-const horas = document.getElementById('horas');
-const minutos = document.getElementById('minutos');
-const segundos = document.getElementById('segundos');
+document.addEventListener("DOMContentLoaded", () => {
+  const horas = document.getElementById("horas");
+  const minutos = document.getElementById("minutos");
+  const segundos = document.getElementById("segundos");
 
-const relogio = setInterval(function time() {
-    let dateToday = new Date();
-    let hr = dateToday.getHours();
-    let min = dateToday.getMinutes();
-    let s = dateToday.getSeconds();
+  function updateTime() {
+    const dateToday = new Date();
+    horas.textContent = formatTime(dateToday.getHours());
+    minutos.textContent = formatTime(dateToday.getMinutes());
+    segundos.textContent = formatTime(dateToday.getSeconds());
+  }
 
-    if (hr < 10) hr = '0' + hr;
+  function formatTime(time) {
+    return String(time).padStart(2, '0');
+  }
 
-    if (min < 10) min = '0' + min;
-
-    if (s < 10) s = '0' + s;
-
-    horas.textContent = hr;
-    minutos.textContent = min;
-    segundos.textContent = s;
-
-})
+  setInterval(updateTime, 1000);
+  updateTime();
+});
