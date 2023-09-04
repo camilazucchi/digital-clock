@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
-
-:root {
-  --background-color: #4b4c85;
-  --box-shadow-color: rgba(0, 0, 0, 0.7);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -15,47 +9,45 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  /* Cobre a altura da tela inteira. */
-  background-image: url(imagens/background.jpg);
+  min-height: 100vh;
+  background-image: url(/assets/imagens/background.jpg);
   background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.relogio {
+.clock {
   display: flex;
   align-items: center;
+  justify-content: center;
   justify-content: space-around;
-  /* Serve para dar o espaçamento entre os itens. */
   min-height: 12.5rem;
   min-width: 34.375rem;
   background: transparent;
   border-radius: 3px;
-  box-shadow: 0px 8px 10px var(--box-shadow-color);
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.7);
 }
 
-.relogio div {
+.clock__item {
   display: flex;
-  flex-direction: column;
-  /* Serve para colocar os elementos um em baixo do outro. */
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   min-height: 10.625rem;
   min-width: 9.375rem;
   color: #fff;
-  background: var(--background-color);
-  box-shadow: 5px 5px 15px var(--box-shadow-color);
+  background: #4b4c85;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
   letter-spacing: 3px;
 }
 
-.relogio span {
+.clock__time {
   font-weight: bolder;
   font-size: 3.75rem;
 }
 
-.relogio span.tempo {
+.clock__label {
   font-size: 0.625rem;
-}
+}/*# sourceMappingURL=style.css.map */

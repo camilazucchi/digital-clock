@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const horas = document.getElementById("horas");
-  const minutos = document.getElementById("minutos");
-  const segundos = document.getElementById("segundos");
+  const hours = document.getElementById("hours");
+  const minutes = document.getElementById("minutes");
+  const seconds = document.getElementById("seconds");
 
   function updateTime() {
     const dateToday = new Date();
-    horas.textContent = formatTime(dateToday.getHours());
-    minutos.textContent = formatTime(dateToday.getMinutes());
-    segundos.textContent = formatTime(dateToday.getSeconds());
+    hours.textContent = formatTime(dateToday.getHours());
+    minutes.textContent = formatTime(dateToday.getMinutes());
+    seconds.textContent = formatTime(dateToday.getSeconds());
   }
 
   function formatTime(time) {

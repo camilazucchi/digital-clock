@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+@import "/assets/css/variables.scss";
+@import "/assets/css/mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+body {
+  @include center-vertically;
+  min-height: 100vh;
+  background-image: url(/assets/imagens/background.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clock {
+  @include center-vertically;
+  justify-content: space-around;
+  min-height: 12.5rem;
+  min-width: 34.375rem;
+  background: transparent;
+  border-radius: 3px;
+  box-shadow: 0px 8px 10px $shadow-box;
+}
+
+.clock__item {
+  @include center-vertically;
+  flex-direction: column;
+  min-height: 10.625rem;
+  min-width: 9.375rem;
+  color: #fff;
+  background: $color-background;
+  box-shadow: 5px 5px 15px $shadow-box;
+  border-radius: 8px;
+  letter-spacing: 3px;
+}
+
+.clock__time {
+  font-weight: bolder;
+  font-size: $font-size-large;
+}
+
+.clock__label {
+  font-size: $font-size-small;
+}
