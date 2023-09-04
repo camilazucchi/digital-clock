@@ -1,20 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
-$background-color: #4b4c85;
-$box-shadow-color: rgba(0, 0, 0, 0.7);
+// colors
+$color-background: #4b4c85;
+
+// shadows
+$shadow-box: rgba(0, 0, 0, 0.7);
+
+// fonts
+$font-family: "Open Sans", sans-serif;
+
+// font-sizes
+$font-size-large: 3.75rem;
+$font-size-small: 0.625rem;
+
+@mixin center-vertically {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-family;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center-vertically;
   min-height: 100vh;
-  /* Cobre a altura da tela inteira. */
   background-image: url(imagens/background.jpg);
   background-size: 100%;
   background-attachment: fixed;
@@ -22,38 +35,33 @@ body {
   background-size: cover;
 }
 
-.relogio {
-  display: flex;
-  align-items: center;
+.clock {
+  @include center-vertically;
   justify-content: space-around;
-  /* Serve para dar o espaçamento entre os itens. */
   min-height: 12.5rem;
   min-width: 34.375rem;
   background: transparent;
   border-radius: 3px;
-  box-shadow: 0px 8px 10px $box-shadow-color;
+  box-shadow: 0px 8px 10px $shadow-box;
 }
 
-.relogio div {
-  display: flex;
+.clock__item {
+  @include center-vertically;
   flex-direction: column;
-  /* Serve para colocar os elementos um em baixo do outro. */
-  align-items: center;
-  justify-content: center;
   min-height: 10.625rem;
   min-width: 9.375rem;
   color: #fff;
-  background: $background-color;
-  box-shadow: 5px 5px 15px $box-shadow-color;
+  background: $color-background;
+  box-shadow: 5px 5px 15px $shadow-box;
   border-radius: 8px;
   letter-spacing: 3px;
 }
 
-.relogio span {
+.clock__time {
   font-weight: bolder;
-  font-size: 3.75rem;
+  font-size: $font-size-large;
 }
 
-.relogio span.tempo {
-  font-size: 0.625rem;
+.clock__label {
+  font-size: $font-size-small;
 }
