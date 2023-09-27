@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-@import "/assets/css/variables.scss";
-@import "/assets/css/mixins.scss";
+@import "./mixins.scss";
+@import "./variables.scss";
 
 * {
   margin: 0;
@@ -13,7 +13,6 @@ body {
   @include center-vertically;
   min-height: 100vh;
   background-image: url(/assets/imagens/background.jpg);
-  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +33,7 @@ body {
   flex-direction: column;
   min-height: 10.625rem;
   min-width: 9.375rem;
-  color: #fff;
+  color: $color-font;
   background: $color-background;
   box-shadow: 5px 5px 15px $shadow-box;
   border-radius: 8px;
@@ -42,10 +41,30 @@ body {
 }
 
 .clock__time {
+  color: $color-font;
   font-weight: bolder;
   font-size: $font-size-large;
 }
 
 .clock__label {
   font-size: $font-size-small;
+}
+
+@media (max-width: $layout-breakpoint-xs) {
+  body {
+    background-position: center;
+  }
+
+  .clock {
+    flex-direction: column;
+    gap: 2rem 0;
+    box-shadow: none;
+    align-items: center;
+    min-width: 50%;
+  }
+
+  .clock__item {
+    background: rgba(75, 76, 133, 0.5);;
+    box-shadow: 0px 8px 10px $shadow-box;
+  }
 }
