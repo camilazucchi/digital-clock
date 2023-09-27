@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(/assets/imagens/background.jpg);
+  background-image: url(/assets/img/background.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +45,7 @@ body {
 .clock__time {
   color: #ffffff;
   font-weight: bolder;
-  font-size: 3.75rem;
+  font-size: 3.125rem;
 }
 
 .clock__label {

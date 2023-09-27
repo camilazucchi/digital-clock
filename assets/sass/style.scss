@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-@import "./mixins.scss";
-@import "./variables.scss";
+@import "./sass/abstracts/mixins.scss";
+@import "./sass/abstracts/variables.scss";
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@
 body {
   @include center-vertically;
   min-height: 100vh;
-  background-image: url(/assets/imagens/background.jpg);
+  background-image: url(/assets/img/background.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
