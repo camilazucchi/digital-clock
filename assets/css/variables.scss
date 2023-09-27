@@ -1,12 +1,20 @@
 // colors
 $color-background: #4b4c85;
+$color-font: #ffffff;
 
 // shadows
 $shadow-box: rgba(0, 0, 0, 0.7);
 
 // fonts
-$font-family: "Open Sans", sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 // font-sizes
-$font-size-large: 3.75rem;
+$font-size-large: 3.125rem;
 $font-size-small: 0.625rem;
+
+// breakpoints
+$layout-breakpoint-xs: 576px;
+$layout-breakpoint-sm: 768px;
+$layout-breakpoint-md: 992px;
+$layout-breakpoint-lg: 1200px;
+$layout-breakpoint-xl: 1201px;
